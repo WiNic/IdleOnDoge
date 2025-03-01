@@ -1,0 +1,36 @@
+[tool.pdm.build]
+includes = []
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[project]
+authors = [
+    {name = "WiNic", email = "nico.winter.work@gmail.com"},
+]
+requires-python = "<4.0,>=3.13"
+dependencies = [
+    "discord<3.0.0,>=2.3.2",
+    "pillow>=11.1.0",
+    "playwright>=1.50.0",
+    "pydantic>=2.10.6",
+    "pydantic-settings>=2.8.0",
+    "pytesseract>=0.3.13",
+    "requests>=2.32.3",
+]
+
+name = "raspbot"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+
+
+[project.optional-dependencies]
+dev = [
+  "ruff",
+  "pytest",
+  "isort",
+  "mypy",
+  "ipykernel>=6.29.5",
+]
